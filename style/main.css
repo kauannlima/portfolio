@@ -3,6 +3,9 @@ body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 img {
     max-width: 100%;
@@ -353,6 +356,7 @@ color: white;
 @media screen and (min-width: 750px){
     .header{
         position: fixed;
+        z-index: 9999;
     }
     .logo-text{
         width: 30%;
