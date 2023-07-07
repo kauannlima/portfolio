@@ -3,6 +3,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -10,7 +11,8 @@ html {
 img {
     max-width: 100%;
 }
-i{
+
+i {
     margin-left: .5em;
 }
 
@@ -27,8 +29,13 @@ i{
     width: 100%;
 }
 
+.js .header {
+    position: fixed;
+    z-index: 9999;
+}
+
 .logo-text {
-    background-image: linear-gradient(to right top, #5fc9f3, #51bae9, #46abdf, #3c9cd5, #348dca, #2f83c3, #2b7abc, #2870b4, #2469af, #2162aa, #1f5ba4, #1e549f);
+    background-color: #1e549f;
     font-size: 24px;
     margin: 0;
     padding: 20px;
@@ -42,6 +49,10 @@ i{
 
 .header__nav {
     clear: left;
+}
+
+.js .header__nav {
+    transition: max-height .7s
 }
 
 .header__nav ul {
@@ -69,6 +80,15 @@ i{
     color: white;
 }
 
+.header__btnMenu {
+    float: right;
+    margin: 1.5em;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+}
+
+
 #home {
     height: 100vh;
     padding: 40px 10px;
@@ -82,8 +102,8 @@ i{
 }
 
 .home__img {
-    width: 12em;
-    height: 12em;
+    width: 15em;
+    height: 15em;
     border: 2px solid white;
     border-radius: 50%;
 }
@@ -98,7 +118,7 @@ i{
 
 .home__text {
     color: white;
-    padding: 20px;
+    padding: 50px;
     text-align: justify;
 }
 
@@ -118,7 +138,8 @@ i{
 .home__btn:hover {
     background-color: rgba(46, 121, 186, .3)
 }
-.home__btn i{
+
+.home__btn i {
     margin-left: .5em;
 }
 
@@ -130,7 +151,7 @@ i{
 .aboutme__title {
     text-align: center;
     font-weight: 600;
-    padding: 1em;
+    padding: 5em 0 1em;
 }
 
 .aboutme__text {
@@ -139,6 +160,27 @@ i{
 
 .used-languages {
     margin-bottom: 4em;
+}
+
+.aboutme__btn {
+    background-color: #1f367d;
+    border-radius: 5px;
+    padding: 15px 25px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: .9s all;
+    margin-bottom: 1em;
+    margin: 2em 0;
+}
+
+.aboutme__btn .fa-angles-down {
+    animation: button 1s infinite;
+}
+
+.aboutme__btn:hover {
+    background-color: #2e79ba;
 }
 
 .used-languages p {
@@ -167,19 +209,19 @@ i{
 }
 
 .used-languages-html::before {
-    background-color: rgb(27, 49, 114);
-}
-
-.used-languages-css::before {
     background-color: #1e549f;
 }
 
+.used-languages-css::before {
+    background-color: #205da6;
+}
+
 .used-languages-js::before {
-    background-color: #2e79ba;
+    background-color: #2367ad;
 }
 
 .used-languages-git::before {
-    background-color: #5fc9f3;
+    background-color: #2870b4;
 }
 
 .used-languages-all {
@@ -191,7 +233,8 @@ i{
     height: 1.1em;
     display: block;
     border-radius: 1em;
-    border: 2px solid #111;
+    border: 2px solid #081f37;
+    background-color: rgba(8, 31, 55, 1)
 }
 
 .used-languages-all::after {
@@ -201,24 +244,81 @@ i{
     border-radius: 1em;
 }
 
+/* background-image: linear-gradient(to right top, #1e549f, #205da6, #2367ad, #2870b4, #2e79ba); */
 .strong-used-languages-html::after {
     width: 80%;
-    background-color: rgb(27, 49, 114);
+    background-color: #1e549f;
 }
 
 .strong-used-languages-css::after {
     width: 70%;
-    background-color: #1e549f;
+    background-color: #205da6;
 }
 
 .strong-used-languages-js::after {
     width: 50%;
-    background-color: #2e79ba;
+    background-color: #2367ad;
 }
 
 .strong-used-languages-git::after {
     width: 40%;
-    background-color: #5fc9f3;
+    background-color: #2870b4;
+}
+
+.scroll-animation .strong-used-languages-html::after {
+    animation: animation-html 1s;
+}
+
+.scroll-animation .strong-used-languages-css::after {
+    animation: animation-css 1s;
+}
+
+.scroll-animation .strong-used-languages-js::after {
+    animation: animation-js 1s;
+}
+
+.scroll-animation .strong-used-languages-git::after {
+    animation: animation-git 1s;
+}
+
+@keyframes animation-html {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes animation-css {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes animation-js {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes animation-git {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 40%;
+    }
 }
 
 .text-button {
@@ -226,25 +326,7 @@ i{
     font-weight: 600;
 }
 
-.aboutme__btn {
-    background-color: #1f367d;
-    border-radius: 5px;
-    padding: 15px 25px;
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: .9s all;
-    margin-bottom: 1em;
-}
 
-.aboutme__btn .fa-angles-down {
-    animation: button 1s infinite;
-}
-
-.aboutme__btn:hover {
-    background-color: #2e79ba;
-}
 
 @keyframes button {
     0% {
@@ -267,7 +349,7 @@ i{
 
 #projects {
     text-align: center;
-    background: linear-gradient(-45deg, transparent 50%, white 50%) no-repeat left calc(50% + 20px) top, linear-gradient(45deg, transparent 50%, white 50%) no-repeat left calc(50% - 20px) top,  linear-gradient(to bottom, #2e79ba, #2972b5, #256bb0, #2264ab, #205da6, #1b569b, #174e8f, #124784, #0c3d70, #09335c, #082949, #081f37) center;
+    background: linear-gradient(-45deg, transparent 50%, white 50%) no-repeat left calc(50% + 20px) top, linear-gradient(45deg, transparent 50%, white 50%) no-repeat left calc(50% - 20px) top, linear-gradient(to bottom, #2e79ba, #2972b5, #256bb0, #2264ab, #205da6, #1b569b, #174e8f, #124784, #0c3d70, #09335c, #082949, #081f37) center;
     background-size: 40px 40px, 40px 40px, cover;
     margin: 0 auto;
     flex-direction: column;
@@ -283,20 +365,22 @@ i{
 
 .slideshow {
     white-space: nowrap;
-    margin: 3em 0;
+    margin: 0;
 }
 
 .slideshow figure {
     display: inline-block;
 
 }
-.slideshow__h2{
+
+.slideshow__h2 {
     color: white;
     font-size: 1.9em;
     font-weight: 600;
+    padding: 1em 0 0;
 }
 
-.slideshow figure img{
+.slideshow figure img {
     max-width: 100%;
 }
 
@@ -313,78 +397,115 @@ i{
     font-weight: 600;
     transition: .9s all;
     width: 10em;
-    
+
 }
+
 .slideshow a:hover {
     background-color: rgba(46, 121, 186, .3)
 }
 
 
-#contact-me{
+#contact-me {
     background-color: #081f37;
     padding: 50px 0 150px;
     color: #777;
 }
+
 .contact-me__links li {
     list-style: none;
     display: inline-block;
     padding-left: 0;
     text-align: center;
 }
-.contact-me__links a{
+
+.contact-me__links a {
     color: #777;
     font-weight: 600;
     text-decoration: none;
     font-size: 2.3em;
     transition: .6s all;
 }
-.contact-me__links a:hover{
-color: white;
+
+.contact-me__links a:hover {
+    color: white;
 }
-.contact-me__logo{
+
+.contact-me__logo {
     text-transform: uppercase;
     text-align: center;
 }
+
 .contact-me__links {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     margin-top: 3em;
     margin: 0;
     padding: 0;
 }
 
-@media screen and (min-width: 750px){
-    .header{
+@media screen and (min-width: 750px) {
+    .header {
         position: fixed;
         z-index: 9999;
+        border-bottom: 2px solid #1e549f;
     }
-    .logo-text{
+
+    .logo-text {
         width: 30%;
         box-sizing: border-box;
     }
-    .header__btnMenu{
+
+    .header__btnMenu {
         display: none;
     }
-    .header__nav{
+
+    .header__nav {
         float: left;
         width: 70%;
         clear: none;
         max-width: 700;
     }
-    .header__nav ul{
+
+    .header__nav ul {
         display: flex;
-        justify-content:space-around;
+        justify-content: space-around;
 
     }
-    .header__nav li{
+
+    .header__nav li {
         border-bottom: none;
         flex-grow: 1;
     }
-    .header__nav a{
+
+    .header__nav a {
         background-color: white;
         color: #999;
     }
-    .header__nav a:hover{
+
+    .header__nav a:hover {
         color: #081f37;
+    }
+
+    .slideshow figure a {
+        display: inline-block;
+        margin: 0 1em;
+    }
+
+}
+
+@media screen and (min-width: 1020px) {
+
+    .home__text {
+        width: 50em;
+    }
+
+    #aboutme .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .slideshow figure img {
+        max-width: 50%;
     }
 }
