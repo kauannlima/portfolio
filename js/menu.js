@@ -8,16 +8,16 @@ function Menu(config) {
 
     this.btn.removeAttribute("style")
 
-    if(this.widthEnabled){
-        window.addEventListener("resize", e =>{
-            if(window.innerWidth > _this.widthEnabled){
+    if (this.widthEnabled) {
+        window.addEventListener("resize", e => {
+            if (window.innerWidth > _this.widthEnabled) {
                 _this.nav.removeAttribute("style")
-            } else if(!this.nav.getAttribute("style")){
+            } else if (!this.nav.getAttribute("style")) {
                 closeMenu()
             }
         })
-        if(window.innerWidth <= _this.widthEnabled){
-            
+        if (window.innerWidth <= _this.widthEnabled) {
+            closeMenu();
         }
     }
 
@@ -39,7 +39,7 @@ function Menu(config) {
         }
         applyStyleToNav(_style)
 
-         _opened = true;
+        _opened = true;
     }
     function applyStyleToNav(_style) {
         Object.keys(_style).forEach(stl => {
@@ -52,6 +52,6 @@ function Menu(config) {
             overflow: "hidden"
         }
         applyStyleToNav(_style)
-         _opened = false;
+        _opened = false;
     }
 }

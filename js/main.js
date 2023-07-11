@@ -9,6 +9,13 @@
         toggleBtn: ".header__btnMenu",
         widthEnabled: 750
     })
+    var carouselImgs = new Carousel({
+        container: '.laptop-slider .slideshow',
+        itens: 'figure',
+        btnPrev: '.prev',
+        btnNext: '.next'
+    })
+
     window.addEventListener('scroll', setupNav)
 
     function setupNav() {
@@ -33,7 +40,6 @@
         function hasClassFx() {
             return !!document.querySelector(".fx")
         }
-        console.log(posYScroll)
     }
 
 
