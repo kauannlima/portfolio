@@ -362,10 +362,11 @@ i {
 .fa-angle-left, .fa-angle-right{
     margin: 0;
     padding: 0;
-    color: white;
+
 }
 .js .laptop-slider {
     overflow: hidden;
+    color: white;
 }
 
 .js .laptop-slider .slideshow {
@@ -379,7 +380,6 @@ i {
     transition: 1s opacity;
     width: 100%;
     margin: auto;
-    border: 1px solid red;
 }
 
 .js .laptop-slider figure.show {
@@ -539,7 +539,7 @@ margin: 6em auto;
         color: #081f37;
     }
     .slideshow figure img {
-        max-width: 950px;
+        max-width: 930px;
     }
 
     .slideshow figure a {
