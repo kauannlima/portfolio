@@ -1,6 +1,7 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -117,12 +118,25 @@ i {
     font-weight: 600;
     padding: 1em;
     text-transform: uppercase;
+    white-space: pre; 
+    overflow: hidden; 
+    animation: typing 5s ;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; 
+    }
 }
 
 .home__text {
     color: white;
     padding: 50px;
     text-align: justify;
+    
 }
 
 .home__btn {
@@ -178,7 +192,7 @@ i {
     margin: 2em 0;
 }
 
-.aboutme__btn .fa-angles-down {
+.aboutme__btn .fa-solid {
     animation: button 1s infinite;
 }
 
@@ -236,7 +250,6 @@ i {
     height: 1.1em;
     display: block;
     border-radius: 1em;
-    border: 2px solid #081f37;
     background-color: rgba(8, 31, 55, 1)
 }
 
@@ -247,7 +260,6 @@ i {
     border-radius: 1em;
 }
 
-/* background-image: linear-gradient(to right top, #1e549f, #205da6, #2367ad, #2870b4, #2e79ba); */
 .strong-used-languages-html::after {
     width: 80%;
     background-color: #1e549f;
@@ -284,6 +296,7 @@ i {
     animation: animation-git 1s;
 }
 
+/* Animações */
 @keyframes animation-html {
     from {
         width: 0%
@@ -324,13 +337,6 @@ i {
     }
 }
 
-.text-button {
-    font-size: 1.5em;
-    font-weight: 600;
-}
-
-
-
 @keyframes button {
     0% {
         transform: translateY(0);
@@ -349,6 +355,10 @@ i {
     }
 }
 
+.text-button {
+    font-size: 1.5em;
+    font-weight: 600;
+}
 
 #projects {
     text-align: center;
@@ -359,11 +369,14 @@ i {
     justify-content: center;
     align-items: center;
 }
-.fa-angle-left, .fa-angle-right{
+
+.fa-angle-left,
+.fa-angle-right {
     margin: 0;
     padding: 0;
 
 }
+
 .js .laptop-slider {
     overflow: hidden;
     color: white;
@@ -449,11 +462,6 @@ i {
 
 }
 
-.slideshow a:hover {
-    background-color: rgba(46, 121, 186, .3)
-}
-
-
 #contact-me {
     background-color: #081f37;
     padding: 50px 0 150px;
@@ -466,9 +474,10 @@ i {
     padding-left: 0;
     text-align: center;
 }
-.contact-me__text{
-width: 80%;
-margin: 6em auto;
+
+.contact-me__text {
+    width: 80%;
+    margin: 6em auto;
 }
 
 .contact-me__links a {
@@ -497,6 +506,8 @@ margin: 6em auto;
 }
 
 @media screen and (min-width: 750px) {
+
+
     .header {
         position: fixed;
         z-index: 9999;
@@ -538,6 +549,7 @@ margin: 6em auto;
     .header__nav a:hover {
         color: #081f37;
     }
+
     .slideshow figure img {
         max-width: 930px;
     }
@@ -550,6 +562,14 @@ margin: 6em auto;
 }
 
 @media screen and (min-width: 1020px) {
+
+    .home__title {
+        font-size: 2em;
+    }
+
+    .home__text {
+        font-size: 1.5em;
+    }
 
     .home__text {
         width: 50em;
