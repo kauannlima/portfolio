@@ -1,7 +1,8 @@
-![Portfolio_Home](https://github.com/kauannlima/portfolio/assets/124539523/3e87dc3a-9782-4b9c-88ee-c2689a38fccf)
+![Portfolio_Home](https://github.com/kauannlima/portfolio/assets/124539523/a2efa029-f22a-4880-8195-391ddac17d40)
+
 <h1 align="center">
 
- Relogio Javascript 🧮
+ Portfólio🖥️
 </h1>
 
 
@@ -24,6 +25,6 @@ Meu portfólio foi desenvolvido com o objetivo de ilustrar e destacar meu perfil
 ## :link: Deploy
 
 ```
-https://kauannlima.github.io/portfolio/
+https://portfolioklima.netlify.app
 ```
 ⌨️ with ❤️ by [Kauan Lima](https://github.com/kauannlima) 😊
