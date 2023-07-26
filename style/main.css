@@ -108,7 +108,7 @@ i {
 .home__img {
     width: 15em;
     height: 15em;
-    border: 2px solid white;
+    border: 3px solid white;
     border-radius: 50%;
 }
 
@@ -116,7 +116,7 @@ i {
     color: white;
     text-align: center;
     font-weight: 600;
-    padding: 1em;
+    padding: .5em;
     text-transform: uppercase;
     white-space: pre; 
     overflow: hidden; 
@@ -134,7 +134,7 @@ i {
 
 .home__text {
     color: white;
-    padding: 50px;
+    padding: .5em;
     text-align: justify;
     
 }
@@ -147,7 +147,7 @@ i {
     display: inline-block;
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.5em;
     font-weight: 600;
     transition: .9s all;
 }
