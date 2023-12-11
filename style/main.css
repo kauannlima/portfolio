@@ -116,11 +116,12 @@ i {
     color: white;
     text-align: center;
     font-weight: 600;
-    padding: .5em;
+    padding: .45em;
     text-transform: uppercase;
     white-space: pre; 
     overflow: hidden; 
     animation: typing 5s ;
+    font-size: 20px;
 }
 
 @keyframes typing {
@@ -161,9 +162,11 @@ i {
 }
 
 #aboutme {
-    padding: 40px;
+    padding: 30px;
     text-align: center;
 }
+
+
 
 .aboutme__title {
     text-align: center;
@@ -188,8 +191,7 @@ i {
     text-decoration: none;
     font-size: 16px;
     transition: .9s all;
-    margin-bottom: 1em;
-    margin: 2em 0;
+    margin: 2em 0 0;
 }
 
 .aboutme__btn .fa-solid {
@@ -199,6 +201,39 @@ i {
 .aboutme__btn:hover {
     background-color: #2e79ba;
 }
+
+.laptop-slider-certificates  img{
+    max-width: 90%;
+}
+
+
+.laptop-slider-certificates {
+    overflow: hidden;
+    color: white;
+}
+
+ .laptop-slider-certificates .slideshow-certificates {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.laptop-slider-certificates {
+    width: 100%;
+    overflow: auto;
+}
+
+.laptop-slider-certificates .slideshow-certificates {
+    white-space: nowrap;
+    margin: 0;
+}
+
+.laptop-slider-certificates .slideshow-certificates .figure {
+    display: inline-block;
+
+}
+
+
 
 .used-languages p {
     align-items: center;
@@ -229,7 +264,7 @@ i {
     background-color: #1e549f;
 }
 
-.used-languages-css::before {
+.used-languages-sf::before {
     background-color: #205da6;
 }
 
@@ -238,6 +273,9 @@ i {
 }
 
 .used-languages-git::before {
+    background-color: #2870b4;
+}
+.used-languages-ang::before {
     background-color: #2870b4;
 }
 
@@ -265,13 +303,13 @@ i {
     background-color: #1e549f;
 }
 
-.strong-used-languages-css::after {
+.strong-used-languages-sf::after {
     width: 70%;
     background-color: #205da6;
 }
 
 .strong-used-languages-js::after {
-    width: 50%;
+    width: 70%;
     background-color: #2367ad;
 }
 
@@ -279,12 +317,16 @@ i {
     width: 40%;
     background-color: #2870b4;
 }
+.strong-used-languages-ang::after {
+    width: 30%;
+    background-color: #2870b4;
+}
 
 .scroll-animation .strong-used-languages-html::after {
     animation: animation-html 1s;
 }
 
-.scroll-animation .strong-used-languages-css::after {
+.scroll-animation .strong-used-languages-sf::after {
     animation: animation-css 1s;
 }
 
@@ -294,6 +336,9 @@ i {
 
 .scroll-animation .strong-used-languages-git::after {
     animation: animation-git 1s;
+}
+.scroll-animation .strong-used-languages-ang::after {
+    animation: animation-ang 1s;
 }
 
 /* Animações */
@@ -323,7 +368,7 @@ i {
     }
 
     to {
-        width: 50%;
+        width: 70%;
     }
 }
 
@@ -334,6 +379,16 @@ i {
 
     to {
         width: 40%;
+    }
+}
+
+@keyframes animation-ang {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 30%;
     }
 }
 
@@ -361,6 +416,7 @@ i {
 }
 
 #projects {
+    height: 100vh;
     text-align: center;
     background: linear-gradient(-45deg, transparent 50%, white 50%) no-repeat left calc(50% + 20px) top, linear-gradient(45deg, transparent 50%, white 50%) no-repeat left calc(50% - 20px) top, linear-gradient(to bottom, #2e79ba, #2972b5, #256bb0, #2264ab, #205da6, #1b569b, #174e8f, #124784, #0c3d70, #09335c, #082949, #081f37) center;
     background-size: 40px 40px, 40px 40px, cover;
@@ -420,7 +476,7 @@ i {
 }
 
 .laptop-slider {
-    padding: 50px 0;
+    padding: 50px 0 0;
     width: 100%;
     overflow: auto;
 }
@@ -439,11 +495,16 @@ i {
     color: white;
     font-size: 1.7em;
     font-weight: 600;
-    padding: 1em 0 0;
+    padding: .1em 0 0;
+    margin-bottom: 0;
 }
 
 .slideshow figure img {
-    max-width: 100%;
+   max-width: 50%;
+}
+
+.slideshow img{
+    max-width: 1em;
 }
 
 .slideshow figure a {
@@ -555,14 +616,13 @@ i {
     }
 
     .slideshow figure img {
-        max-width: 930px;
+        max-width: 50%;
     }
 
     .slideshow figure a {
         display: inline-block;
         margin: 0 1em;
     }
-
 }
 
 @media screen and (min-width: 1020px) {
@@ -582,6 +642,13 @@ i {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 30px;
+    }
+    .slideshow figure a {
+        display: inline-block;
+        margin: 0 .5em;
+    }
+    .slideshow figure img {
+        max-width: 40%;
     }
 
 }
