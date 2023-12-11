@@ -94,7 +94,7 @@ i {
 
 
 #home {
-    height: 100vh;
+    height: 150vh;
     padding: 40px 10px;
     text-align: center;
     background: linear-gradient(45deg, white 50%, transparent 50%) no-repeat left calc(50% + 20px) bottom, linear-gradient(-45deg, white 50%, transparent 50%) no-repeat left calc(50% - 20px) bottom, linear-gradient(to right top, #5fc9f3, #51bae9, #46abdf, #3c9cd5, #348dca, #2f83c3, #2b7abc, #2870b4, #2469af, #2162aa, #1f5ba4, #1e549f) center;
@@ -623,6 +623,10 @@ i {
         display: inline-block;
         margin: 0 1em;
     }
+    .header{
+        height: 130vh;
+    }
+  
 }
 
 @media screen and (min-width: 1020px) {
