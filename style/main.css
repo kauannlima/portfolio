@@ -476,7 +476,7 @@ i {
 }
 
 .laptop-slider {
-    padding: 50px 0 0;
+    padding: 30vh 0 0;
     width: 100%;
     overflow: auto;
 }
@@ -625,6 +625,12 @@ i {
     }
     .home{
         height: 100vh;
+    }
+
+    .laptop-slider {
+        padding: 15vh 0 0;
+        width: 100%;
+        overflow: auto;
     }
   
 }
